@@ -56,6 +56,7 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     Bisa bisa bisa yuk bisa ayok bisaa.
+                                    kedua kali bisa, yuk bnisa yuk, bisa yuk bisa.
                                 </div>
                             </div>
                         </div>
