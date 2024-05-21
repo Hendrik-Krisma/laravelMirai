@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/penjualanMirai', function () {
+    return view('tableOrders');
+});
+
+Route::get('/penjualanMirai', function () {
+    return view('tableOrders');
+});
+
 Route::get('/ invoices', function () {
     return view('invoices');
 });
