@@ -35,9 +35,7 @@ if ($aksi == "tambah") {
                     <div class="card-header pb-0">
                         <div class="row">
                             <div class="col-2">
-                                <a class=" btn bg-gradient-info mt-3 w-100"
-                                    href="./dashboard.php?section=ordersPage&aksi=tambah">TAMBAH
-                                    DATA
+                                <a href="/tambahDataOrder" class="btn btn-success">TAMBAHDATA
                                 </a>
                             </div>
                             <div class="col-10 mt-3 ">
@@ -54,6 +52,7 @@ if ($aksi == "tambah") {
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
+                        
                         <div class="table-responsive">
                             <table class="table align-items-center mb-0">
                                 <thead>
@@ -74,8 +73,7 @@ if ($aksi == "tambah") {
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
-                                @foreach ($data as $row )
-    
+                                    @foreach ($data as $row)
                                     <tr>
                                         <td class="align-middle text-center text-sm">1</td>
                                         <td class="align-middle text-center text-sm">
@@ -110,12 +108,14 @@ if ($aksi == "tambah") {
                                             </div>
                                             <a href="tableOrders"></a>
                                         </td>
-                                        <td class="align-middle text-center text-sm">1 Strawberry Sago</td>
-                                        <td class="align-middle text-center text-sm">Rp20.000</td>
-                                        <td class="align-middle text-center text-sm">Jumat, 30-03-2024</td>
-                                        <td class="align-middle text-center text-sm">Tunai</td>
+                                        <th scope="row">{{ $row->id }}</th>
+                                        <td class="align-middle text-center text-sm">{{ $row->orderID }}</td>
+                                        <td class="align-middle text-center text-sm">{{ $row->productList }}</td>
+                                        <td class="align-middle text-center text-sm">{{ $row->orderTotal }}</td>
+                                        <td class="align-middle text-center text-sm">{{ $row->orderDate }}</td>
+                                        <td class="align-middle text-center text-sm">{{ $row->paymentType }}</td>
                                         <td class="align-middle text-center text-sm">
-                                            <a class=" btn bg-gradient-warning w-100">PENDING
+                                            <a class=" btn bg-gradient-warning w-100">{{ $row->paymentStatus }}
                                             </a>
                                         </td>
                                         <td>
@@ -125,65 +125,11 @@ if ($aksi == "tambah") {
                                             <button type="button" class="btn btn-danger">DELETE</button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="align-middle text-center text-sm">2</td>
-                                        <td class="align-middle text-center text-sm">MD0097</td>
-                                        <td class="align-middle text-center text-sm">2 Mango Sago, 2 Strawberry Sago</td>
-                                        <td class="align-middle text-center text-sm">Rp76.000</td>
-                                        <td class="align-middle text-center text-sm">Jumat, 30-03-2024</td>
-                                        <td class="align-middle text-center text-sm">Transfer</td>
-                                        <td class="align-middle text-center text-sm">
-                                            <a class=" btn bg-gradient-success w-100">DONE
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning">
-                                                <a href="./dashboard.php?section=ordersPage&aksi=edit">EDIT</a>
-                                            </button>
-                                            <button type="button" class="btn btn-danger">DELETE</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="align-middle text-center text-sm">3</td>
-                                        <td class="align-middle text-center text-sm">MD0096</td>
-                                        <td class="align-middle text-center text-sm">2 Mango Sago</td>
-                                        <td class="align-middle text-center text-sm">Rp40.000</td>
-                                        <td class="align-middle text-center text-sm">Jumat, 22-03-2024</td>
-                                        <td class="align-middle text-center text-sm">Transfer</td>
-                                        <td class="align-middle text-center text-sm">
-                                            <a class=" btn bg-gradient-success w-100">DONE
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning">
-                                                <a href="./dashboard.php?section=ordersPage&aksi=edit">EDIT</a>
-                                            </button>
-                                            <button type="button" class="btn btn-danger">DELETE</button>
-                                        </td>
-                                    </tr>
-                                    <>
-                                        <td class="align-middle text-center text-sm">4</td>
-                                        <td class="align-middle text-center text-sm">MD0095</td>
-                                        <td class="align-middle text-center text-sm">1 Mango Sago</td>
-                                        <td class="align-middle text-center text-sm">Rp20.000</td>
-                                        <td class="align-middle text-center text-sm">Jumat, 22-03-2024</td>
-                                        <td class="align-middle text-center text-sm">Tunai</td>
-                                        <td class="align-middle text-center text-sm">
-                                            <a class=" btn bg-gradient-danger w-100">CANCEL
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning">
-                                                <a href="./dashboard.php?section=ordersPage&aksi=edit">EDIT</a>
-                                            </button>
-                                            <button type="button" class="btn btn-danger">DELETE</button>
-                                        </td>
-
-                                        </td>
-                                    </tr>
-
-                                    </tr> 
                                     @endforeach
+
+                                    
+
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -209,3 +155,8 @@ if ($aksi == "tambah") {
     })
 </script>
 </script>
+
+
+
+
+

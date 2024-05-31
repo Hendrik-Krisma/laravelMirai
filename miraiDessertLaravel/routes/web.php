@@ -18,14 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/penjualanMirai', function () {
-    return view('tableOrders');
-});
-
-Route::get('/invoices', function () {
+Route::get('/ invoices', function () {
     return view('invoices');
 });
 
-Route::get('/tampilkandata/{id}', [OrderController::class, 'tampilkandata'])->name('tampilkandata');
-Route::post('/updatedata/{id}', [OrderController::class, 'updatedata']);
+Route::get('/penjualanMirai',[OrderController::class, 'index'])->name('penjualanMirai');
 
+Route::get('/tambahDataOrder',[OrderController::class, 'tambahDataOrder'])->name('tambahDataOrder');
+
+Route::post('/insertData',[OrderController::class, 'insertData'])->name('insertData');

@@ -7,15 +7,16 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function tampilkandata($id){
-        $data= Order::find($id);
-        
-        return view('tampildata', compact('data'));
+    public function index(){
+        $data = Order::all();
+        return view('tableOrders',compact('data'));
     }
 
-    public function updatedata(Request $request, $id){
-        $data= Order::find($id);
-        $data->update($request->all());
-        return redirect()->routes('tableOrders')->with('success','Data Berhasil Di update');
+    public function tambahDataOrder(){
+        return view('tambahDataOrder');
+    }
+    public function insertData(Request $request){
+        Order::create($request->all());
+        return redirect()->route('penjualanMirai');
     }
 }
