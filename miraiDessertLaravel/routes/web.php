@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return View::make('layout/main');
 });
 
 Route::get('/penjualanMirai', function () {
-    return view('tableOrders');
+    return view('/Orders/tableOrders');
 });
 
-Route::get('/ invoices', function () {
-    return view('invoices');
+Route::get('/invoices', function () {
+    return view('/Invoices/invoices');
 });
