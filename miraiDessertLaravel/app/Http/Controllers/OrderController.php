@@ -19,4 +19,26 @@ class OrderController extends Controller
         Order::create($request->all());
         return redirect()->route('penjualanMirai');
     }
+
+    public function tampilkandata($id){
+
+        $data = Order:: find($id);
+        // dd($data);
+
+        return view('tampildata', compact('data')); 
+    }
+
+    public function updatedata(Request $request, $id){
+        $data = Order:: find($id);
+        $data->update($request->all()); 
+        return redirect()->route('penjualanMirai')->with('success', 'Data Berhasil Di Update');
+
+    }
+
+    public function delete($id){
+        $data = Order:: find($id);
+        $data->delete(); 
+        return redirect()->route('penjualanMirai')->with('success', 'Data Berhasil Di Hapus');
+
+    }
 }

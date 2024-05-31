@@ -27,3 +27,8 @@ Route::get('/penjualanMirai',[OrderController::class, 'index'])->name('penjualan
 Route::get('/tambahDataOrder',[OrderController::class, 'tambahDataOrder'])->name('tambahDataOrder');
 
 Route::post('/insertData',[OrderController::class, 'insertData'])->name('insertData');
+
+Route::get('/tampilkan data/{id}',[OrderController::class, 'tampilkandata'])->name('tampilkandata');
+Route::post('/updatedata/{id}',[OrderController::class, 'updatedata'])->name('updatedata');
+
+Route::get('/delete/{id}',[OrderController::class, 'delete'])->name('delete');
