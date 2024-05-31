@@ -36,7 +36,7 @@ if ($aksi == "tambah") {
                         <div class="row">
                             <div class="col-2">
                                 <a class=" btn bg-gradient-info mt-3 w-100"
-                                    href="./dashboard.php?section=ordersPage&aksi=tambah">TAMBAH
+                                    href="./dashboard.php?section=ordersPage&aksi=tambah">EDIT
                                     DATA
                                 </a>
                             </div>
@@ -177,8 +177,6 @@ if ($aksi == "tambah") {
                                                 <a href="./dashboard.php?section=ordersPage&aksi=edit">EDIT</a>
                                             </button>
                                             <button type="button" class="btn btn-danger">DELETE</button>
-                                        </td>
-
                                         </td>
                                     </tr>
 

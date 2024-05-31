@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ Route::get('/penjualanMirai', function () {
     return view('tableOrders');
 });
 
-Route::get('/ invoices', function () {
+Route::get('/invoices', function () {
     return view('invoices');
 });
+
+Route::get('/tampilkandata/{id}', [OrderController::class, 'tampilkandata'])->name('tampilkandata');
+Route::post('/updatedata/{id}', [OrderController::class, 'updatedata']);
+
