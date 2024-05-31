@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ invoices', function () {
-    return view('invoices');
-});
 
 Route::get('/penjualanMirai',[OrderController::class, 'index'])->name('penjualanMirai');
-
 Route::get('/tambahDataOrder',[OrderController::class, 'tambahDataOrder'])->name('tambahDataOrder');
-
 Route::post('/insertData',[OrderController::class, 'insertData'])->name('insertData');
+
+
+Route::get('/invoices',[InvoiceController::class, 'index'])->name('invoices');
+Route::get('/tambahDataInvoice',[InvoiceController::class, 'tambahDataInvoice'])->name('tambahDataInvoice');
+Route::post('/insertInvoice',[InvoiceController::class, 'insertInvoice'])->name('insertInvoice');
