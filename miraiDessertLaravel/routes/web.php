@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('login');
+});
 
 Route::get('/penjualanMirai',[OrderController::class, 'index'])->name('penjualanMirai');
 Route::get('/tambahDataOrder',[OrderController::class, 'tambahDataOrder'])->name('tambahDataOrder');
