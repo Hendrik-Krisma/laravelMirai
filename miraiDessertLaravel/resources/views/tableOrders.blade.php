@@ -35,7 +35,7 @@ if ($aksi == "tambah") {
                     <div class="card-header pb-0">
                         <div class="row">
                             <div class="col-2">
-                                <a href="/tambahDataOrder" class="btn btn-success">TAMBAHDATA
+                                <a href="/tambahDataOrder/" class="btn btn-success">TAMBAH DATA
                                 </a>
                             </div>
                             <div class="col-10 mt-3 ">
@@ -120,7 +120,7 @@ if ($aksi == "tambah") {
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-warning">
-                                            <a href="/tampilkan data/{{$row->id}}" class="btn btn-info">EDIT</a>
+                                            <a href="/tampilkanDataOrder/{{$row->id}}" class="btn btn-info">EDIT</a>
                                             </button>
                                             <a href="/delete/{{$row->id}}" class="btn btn-danger">DELETE</button>
                                         </td>

@@ -26,7 +26,8 @@ if ($aksi == "tambah") {
                             <div class="mb-3">
                                 <label for="selectProduct" class="form-label">Produk</label>
                                 <select id="selectProduct" name="productList" class="form-select">
-                                <option selected>{{$data->productList}}</option>
+                                <!-- <option selected> {{ $data->productList }}</option> -->
+                                <option selected>Pilih Produk</option>
                                 <option value="Mango Sago 300 ml">Mango Sago 300 ml</option>
                                 <option value="Mango Sago 400 ml">Mango Sago 400 ml</option>
                                 <option value="Strawberry Sago 300 ml">Strawberry Sago 300 ml</option>
@@ -44,7 +45,8 @@ if ($aksi == "tambah") {
                             <div class="mb-3">
                                 <label for="paymentType" class="form-label">Metode Pembayaran</label>
                                 <select id="paymentType" name="paymentType" class="form-select">
-                                <option selected>{{$data->paymentType}}</option>
+                                <!-- <option selected> {{ $data->paymentType }}</option> -->
+                                <option selected>Pilih Metode Pembayaran</option>
                                 <option value="Transfer">Transfer</option>
                                 <option value="Tunai">Tunai</option>
                                 </select>
@@ -52,7 +54,8 @@ if ($aksi == "tambah") {
                             <div class="mb-3">
                                 <label for="status" class="form-label">Status</label>
                                 <select id="status" name="paymentStatus" class="form-select">
-                                <option selected>{{$data->paymentStatus}}</option>
+                                <!-- <option selected>{{$data->paymentStatus}}</option> -->
+                                <option selected>Pilih Status Pesanan</option>
                                 <option value="Done">Done</option>
                                 <option value="Cancel">Cancel</option>
                                 <option value="Pending">Pending</option>

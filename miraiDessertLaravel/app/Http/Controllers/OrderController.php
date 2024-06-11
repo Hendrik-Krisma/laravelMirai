@@ -20,15 +20,13 @@ class OrderController extends Controller
         return redirect()->route('penjualanMirai');
     }
 
-    public function tampilkandata($id){
-
+    public function tampilkanDataOrder($id){
         $data = Order:: find($id);
         // dd($data);
-
-        return view('tampildata', compact('data')); 
+        return view('tampilDataOrder', compact('data')); 
     }
 
-    public function updatedata(Request $request, $id){
+    public function updateDataOrder(Request $request, $id){
         $data = Order:: find($id);
         $data->update($request->all()); 
         return redirect()->route('penjualanMirai')->with('success', 'Data Berhasil Di Update');

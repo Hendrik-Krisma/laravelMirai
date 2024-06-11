@@ -16,8 +16,8 @@ class CreateTbInvoicesTable extends Migration
         Schema::create('tb_invoices', function (Blueprint $table) {
             $table->id();
             $table->integer ('orderID');
-            $table->integer ('issueData');
-            $table->string ('dueData');
+            $table->date ('issueDate');
+            $table->date ('dueDate');
             $table->integer ('paid');
             $table->timestamps();
         });

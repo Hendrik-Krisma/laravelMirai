@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="text-center mb-4">EDIT DATA INVOICES MIRAI</h1>
+    <h1 class="text-center mb-4">TAMBAH DATA INVOICES MIRAI</h1>
     <div class="container">
 
         <div class="row justify-content-center">
@@ -15,24 +15,23 @@
             <div class="card">
               <div class="card-body">
         
-                  <form action= "/updateDataInvoice/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                  <form action="/insertInvoice" method="POST" enctype="multipart/form-data">
                     @csrf
 
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Order Id</label>
-                    <input type="number" class="form-control" name="orderID" id="exampleInputOrderID" value="{{$data->orderID}}">
-                  
+                    <input type="number" class="form-control" name="orderID" id="exampleInputOrderID" >
                   <div class="mb-3">
                     <label for="exampleInputIssueDate" class="form-label">Issue Date</label>
-                    <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate" value="{{$data->issueDate}}">
+                    <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputDueDate" class="form-label">Due Date</label>
-                    <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate" value="{{$data->dueDate}}">
+                    <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate">
                   </div>
                   <div class="mb-3">
                     <label for="paid" class="form-label">Paid</label>
-                    <input type="number" class="form-control" name="paid" id="examplepaid" value="{{$data->paid}}">
+                    <input type="number" class="form-control" name="paid" id="examplepaid">
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                   
