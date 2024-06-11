@@ -35,7 +35,10 @@
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                   
-                  <!-- <button type="submit" class="btn btn-warning" a href="invoices">Kembali</button> -->
+                  <a href ="\invoices" class="btn btn-warning">
+                    <i class="fas fa-arrow-left"></i>Kembali
+                  </a>
+                  <!-- <button class="btn btn-warning" href="/invoices">Kembali</button> -->
                  
                   </form>
                 

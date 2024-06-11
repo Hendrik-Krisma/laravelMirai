@@ -9,7 +9,8 @@
     <title>Mirai Login Page</title>
   </head>
   <body>
-    <form action ="sv_login.php" method="post">
+    <form action ="/postsLogin" method="post" enctype="multipart/form-data">
+    @csrf
     <div class="input">
       <h1>Login Admin Mirai</h1>
       <div class="box-input">
@@ -20,10 +21,11 @@
         <i class="fas fa-lock"></i>
         <input type="password" name="password" id="password" placeholder="Password" />
       </div>
+      
       <button type="submit" name="login" class="btn-input">Login</button>
-      <!--<div class="button">
-        <p>Belum memiliki akun? <a href="register.php">Register disini</a></p>
-      </div> -->
+      <div class="button">
+        <p>Belum memiliki akun? <a href="{{ route('registration') }}">Register disini</a></p>
+      </div>
     </div>
 </form>
   </body>
