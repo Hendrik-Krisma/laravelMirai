@@ -1,0 +1,122 @@
+:root {
+    --primary: #000000;
+    --bg: #ffffff;
+    --brown: #c3a065;
+    --cream: #f0cd9e;
+    --skin: #ffedde;
+    --darkbrown: rgb(38, 97, 63);
+    --background: #fff9ee;
+    --krim: #ffffff;
+
+
+  }
+  
+  @font-face {
+    font-family: fontlogin;
+    src: url(font/CaveatBrush-Regular.ttf);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--krim);
+    font-family: fontlogin;
+  }
+  
+  .input {
+    position: fixed;
+    top: auto;
+    left: 610px;
+    transform: translate(-30%, 35%);
+    background: var(--darkbrown);
+    padding: 50px;
+    width: 270px;
+    /*box-shadow: 0px 0px 50px 5px var(--darkbrown);*/
+    border-radius: 15px;
+  }
+  
+  .input h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: fontlogin;
+    letter-spacing: 3px;
+    padding-top: 0;
+    margin-top: -20px;
+  }
+  
+  .box-input {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-bottom: 2px solid white;
+    padding: 8px 0;
+  }
+  
+  .box-input i {
+    font-size: 23px;
+    color: white;
+    padding: 5px 0;
+  }
+  
+  .box-input input {
+    width: 85%;
+    padding: 5px 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .box-input input::placeholder {
+    color: white;
+    font-family: fontlogin;
+  }
+  
+  .btn-input .box-input input:hover {
+    background: rgba(10, 10, 10, s 0.5);
+  }
+  
+  .btn-input {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid white;
+    width: 92.5%;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 10px;
+    font-family: fontlogin;
+  }
+  
+  .btn-input:hover {
+    background: var(--cream);
+    color: var(--darkbrown);
+  }
+  
+  .button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -20px;
+  }
+  
+  .button p {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .button a {
+    color: var(--cream);
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .button a:hover {
+    text-decoration: underline;
+  }
