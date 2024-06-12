@@ -15,15 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return View::make('layout/main');
 });
 
-Route::get('/ invoices', function () {
-    return view('invoices');
+Route::get('/penjualanMirai', function () {
+    return view('/Orders/tableOrders');
 });
 
-Route::get('/penjualanMirai',[OrderController::class, 'index'])->name('penjualanMirai');
-
-Route::get('/tambahDataOrder',[OrderController::class, 'tambahDataOrder'])->name('tambahDataOrder');
-
-Route::post('/insertData',[OrderController::class, 'insertData'])->name('insertData');
+Route::get('/invoices', function () {
+    return view('/Invoices/invoices');
+});

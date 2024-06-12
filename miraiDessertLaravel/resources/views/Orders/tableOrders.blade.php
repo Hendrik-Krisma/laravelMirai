@@ -1,3 +1,5 @@
+@extends('../layout/main')
+
 <?php
 $aksi = isset($_GET['aksi']) ? $_GET['aksi'] : "";
 if ($aksi == "tambah") {
@@ -6,7 +8,7 @@ if ($aksi == "tambah") {
     include "tableOrdersEdit.php";
 } else {
     ?>
-
+@section('container')
         <div class="row mb-4">
             <div class="col-12 mb-lg-0">
                 <div class="card z-index-2">
@@ -137,6 +139,7 @@ if ($aksi == "tambah") {
                 </div>
             </div>
         </div>
+@endsection
 
     <?php
 }
