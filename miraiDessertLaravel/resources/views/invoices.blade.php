@@ -10,7 +10,19 @@
     <h1 class="text-center mb-4">DATA INVOICES MIRAI</h1>
     <div class="container">
     <a href=/tambahDataInvoice <button type="button" class="btn btn-success" >Tambah +</button> </a>
+
+    <form>
+  <!-- <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      c
+    </div>
+  </div> -->
+
         <div class="row">
+
+
+
+
         <table class="table">
     <thead>
     <tr>
