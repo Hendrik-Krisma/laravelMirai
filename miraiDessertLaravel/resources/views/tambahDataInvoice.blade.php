@@ -1,58 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>data invoices</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1 class="text-center mb-4">TAMBAH DATA INVOICES MIRAI</h1>
-    <div class="container">
+@extends('dashboard')
+@Include ('components.cssWebsite')
 
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <div class="card">
-              <div class="card-body">
-        
-                  <form action="/insertInvoice" method="POST" enctype="multipart/form-data">
-                    @csrf
-
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Order Id</label>
-                    <input type="number" class="form-control" name="orderID" id="exampleInputOrderID" >
-                  <div class="mb-3">
-                    <label for="exampleInputIssueDate" class="form-label">Issue Date</label>
-                    <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputDueDate" class="form-label">Due Date</label>
-                    <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate">
-                  </div>
-                  <div class="mb-3">
-                    <label for="paid" class="form-label">Paid</label>
-                    <input type="number" class="form-control" name="paid" id="examplepaid">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  
-                  <a href ="\invoices" class="btn btn-warning">
-                    <i class="fas fa-arrow-left"></i>Kembali
-                  </a>
-                  <!-- <button class="btn btn-warning" href="/invoices">Kembali</button> -->
-                 
-                  </form>
-                
-                </div>
-              </div>
-            </div>
+@section('content')
 
 
-
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <div class="container-fluid py-4">
+    <div class="container-fluid col-10">
+      <h2 class="font-weight-bolder mb-3  ">Menambahkan Data Invoice</h2>
+      <form action="/insertInvoice" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <label for="example-text-input" class="form-control-label">Order ID</label>
+          <input type="number" class="form-control" name="orderID" id="example-text-input">
         </div>
+        <div class="form-group">
+          <label for="exampleInputIsueDate" class="form-control-label">Issue Date</label>
+          <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputDueDate" class="form-control-label">Due Date</label>
+          <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate">
+        </div>
+        <div class="form-group pb-2">
+          <label for="examplePaid" class="form-control-label">Paid</label>
+          <input type="number" class="form-control" name="paid" id="examplepaid">
+        </div>
+        <div class="card-footer mt-4">
+
+          <button type="submit" name="btn" value="Simpan" class="btn btn-info">
+            <i class="fas fa-save"></i> Save
+          </button>
+          <a href="\invoices" class="btn btn-warning ms-3" style="color: black">
+            <i class="fas fa-arrow-left"></i> Back
+          </a>
+        </div>
+      </form>
+
     </div>
-
-
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+  </div>
+</main>
+@endsection
+@include ('components.pluginDashboard')
+@include ('components.scriptDashboard')

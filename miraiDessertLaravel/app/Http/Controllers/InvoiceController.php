@@ -9,7 +9,7 @@ class InvoiceController extends Controller
 {
     public function index(){
         $data = Invoice::all();
-        return view('invoices',compact('data'));
+        return view('invoices.invoices',compact('data'));
     }
 
     public function tambahDataInvoice(){

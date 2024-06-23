@@ -16,8 +16,17 @@ class Order extends Model
 
     protected $auditTimestamps = true;
 
+    protected $casts = [
+        'orderDatet' => 'datetime:Y-m-d',
+        
+    ];
+
     public $fillable = [
         'id',
-        'code',
+        'paymentType',
+        'paymentStatus',
+        'productList',
+        'orderDate',
+        'orderTotal',
     ];
 }

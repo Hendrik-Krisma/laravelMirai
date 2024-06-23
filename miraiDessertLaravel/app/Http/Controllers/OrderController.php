@@ -9,7 +9,7 @@ class OrderController extends Controller
 {
     public function index(){
         $data = Order::all();
-        return view('tableOrders',compact('data'));
+        return view('orders.tableOrders',compact('data'));
     }
 
     public function tambahDataOrder(){
