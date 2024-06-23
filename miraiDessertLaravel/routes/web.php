@@ -63,5 +63,8 @@ Route::post('/updateDataInvoice/{id}',[InvoiceController::class, 'updateDataInvo
 Route::get('/deleteDataInvoice/{id}',[InvoiceController::class, 'deleteDataInvoice'])->name('deleteDataInvoice');
 
 Route::get('/search', [InvoiceController::class, 'search'])->name('invoices.search');
+Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
+
+
 
 
