@@ -8,8 +8,17 @@
   </head>
   <body>
     <h1 class="text-center mb-4">DATA INVOICES MIRAI</h1>
+    
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex"> 
+      <div class="username">
+        <a class="d-block">Hello {{ Auth::user()->name}}</a>
+      </div>
+    </div>
+
     <div class="container">
     <a href=/tambahDataInvoice <button type="button" class="btn btn-success" >Tambah +</button> </a>
+    
+    <a href=/logout <button type="button" class="btn btn-warning" >Logout</button> </a>
 
     <form>
   <!-- <div class="row g-3 align-items-center">

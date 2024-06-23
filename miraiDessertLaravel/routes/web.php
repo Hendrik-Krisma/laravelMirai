@@ -48,5 +48,8 @@ Route::post('/loginproses',[AuthController::class, 'loginproses'])->name('loginp
 Route::get('/register',[AuthController::class, 'register'])->name('register');
 Route::post('/registeradmin',[AuthController::class, 'registeradmin'])->name('registeradmin');
 
+Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
+
+
 
 

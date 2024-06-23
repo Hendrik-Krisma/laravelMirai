@@ -37,6 +37,11 @@ class AuthController extends Controller
         return \redirect('/login');
     }
 
+    public function logout(){
+        Auth::logout();
+        return \redirect('login');
+    }
+
     // public function postLogin (Request $request) {
     //     $request->validate([
     //         'username' => 'required',
