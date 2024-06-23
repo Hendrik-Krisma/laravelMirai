@@ -21,6 +21,9 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/registration',[AuthController::class, 'registration'])->name('registration');
+Route::post('custom-registration', [AuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::post('/insertUser',[AuthController::class, 'insertUser'])->name('insertUser');
 
 Route::get('/',[InvoiceController::class, 'index'])->name('invoices')->middleware('auth');
 // Route::get('/', function () {
