@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Invoice;
 use Illuminate\Http\Request;
+use App\Helpers\Helper;
+
 
 class InvoiceController extends Controller
 {
@@ -16,7 +18,19 @@ class InvoiceController extends Controller
         return view('tambahDataInvoice');
     }
     public function insertInvoice(Request $request){
-        Invoice::create($request->all());
+        $orderID = Helper::idGenerator(new Invoice, 'orderID', 5, 'MR');
+        $issueDate = $request->issueDate;
+        $dueDate = $request->dueDate;
+        $paid = $request->paid;
+
+        $save = new Invoice;
+        $save->orderID = $orderID;
+        $save->issueDate = $issueDate;
+        $save->dueDate = $dueDate;
+        $save->paid = $paid;
+        $save->save();
+
+        // Invoice::create($request->all());
         return redirect()->route('invoices');
     }
 

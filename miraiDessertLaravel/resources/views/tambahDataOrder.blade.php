@@ -11,10 +11,10 @@
 <form action="/insertData" method="POST" enctype="multipart/form-data">
     @csrf
     @method('POST')
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="idPenjualan" class="form-label">ID Penjualan</label>
         <input type="form-text" name="id" class="form-control">
-    </div>
+    </div> -->
     <div class="mb-3">
         <label for="selectProduct" class="form-label">Produk</label>
         <select id="selectProduct" name="productList" class="form-select">
@@ -27,7 +27,7 @@
     </div>
     <div class="mb-3">
         <label for="total" class="form-label">Total Harga</label>
-        <input type="number" name="orderTotal" class="form-control">
+        <input type="number" name="orderTotal" class="form-control harga">
     </div>
     <div class="mb-3">
         <label for="tanggalPembelian" class="form-label">Tanggal Pembelian</label>

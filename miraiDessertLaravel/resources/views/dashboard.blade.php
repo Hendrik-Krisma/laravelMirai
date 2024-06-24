@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@Include ('components.cssWebsite')
+@include ('components.cssWebsite')
 
 <body class="g-sidenav-show  bg-gray-100">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "

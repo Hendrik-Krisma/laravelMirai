@@ -11,13 +11,25 @@ use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
+    public function index(){
+        $data = User::all();
+        return view('auth.akun',compact('data'));
+    }
+
+    public function deleteAkun($id){
+        $data = User:: find($id);
+        $data->delete(); 
+        return redirect()->route('akun')->with('success', 'Data Berhasil Di Hapus');
+
+    }
+
     public function login(){
         return view('auth.login');
     }
 
     public function loginproses (Request $request){
         if(Auth::attempt($request->only('username','password'))) {
-            return redirect('invoices');   
+            return redirect('penjualanMirai');   
         }
 
         return \redirect('login');

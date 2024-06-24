@@ -17,7 +17,7 @@ class Order extends Model
     protected $auditTimestamps = true;
 
     protected $casts = [
-        'orderDatet' => 'datetime:Y-m-d',
+        'orderDate' => 'datetime:Y-m-d',
         
     ];
 

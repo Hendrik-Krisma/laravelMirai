@@ -3,19 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Charts\orderChart;
 use Illuminate\Http\Request;
+use App\Helpers\Helper;
 
 class OrderController extends Controller
 {
-    public function index(){
+    public function index(orderChart $chart){
         $data = Order::all();
-        return view('orders.tableOrders',compact('data'));
+        return view('orders.tableOrders',compact('data'),  ['chart' => $chart->build()]);
+        // return view('orders.tableOrders', [
+        //  compact('data'), 
+        //  'tableOrders' => $chart->build()
+        // ]);
     }
 
     public function tambahDataOrder(){
         return view('tambahDataOrder');
     }
     public function insertData(Request $request){
+       
         Order::create($request->all());
         return redirect()->route('penjualanMirai');
     }
@@ -39,4 +46,5 @@ class OrderController extends Controller
         return redirect()->route('penjualanMirai')->with('success', 'Data Berhasil Di Hapus');
 
     }
+
 }

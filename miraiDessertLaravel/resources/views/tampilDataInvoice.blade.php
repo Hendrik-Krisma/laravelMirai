@@ -10,17 +10,16 @@
       <form action="/updateDataInvoice/{{ $data->id }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Order Id</label>
-          <input type="number" class="form-control" name="orderID" id="exampleInputOrderID" value="{{$data->orderID}}">
+          <!-- <label for="exampleInputEmail1" class="form-label">Order Id</label>
+          <input type="number" class="form-control" name="orderID" id="exampleInputOrderID" value="{{$data->orderID}}"> -->
 
           <div class="mb-3">
             <label for="exampleInputIssueDate" class="form-label">Issue Date</label>
-            <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate"
-              value="{{$data->issueDate}}">
+            <input type="date" class="form-control" name="issueDate" id="exampleInputIssueDate" value="{{ Carbon\Carbon::parse($data->issueDate)->format('Y-m-d') }}">
           </div>
           <div class="mb-3">
             <label for="exampleInputDueDate" class="form-label">Due Date</label>
-            <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate" value="{{$data->dueDate}}">
+            <input type="date" class="form-control" name="dueDate" id="exampleInputDueDate"  value="{{ Carbon\Carbon::parse($data->dueDate)->format('Y-m-d') }}">
           </div>
           <div class="mb-3">
             <label for="paid" class="form-label">Paid</label>
@@ -28,9 +27,9 @@
           </div>
           <div class="card-footer mt-4">
 
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
             <a href="\invoices" class="btn btn-warning ms-3" style="color: black">
-              <i class="fas fa-arrow-left"></i> Back
+              <i class="fas fa-arrow-left"></i> Kembali
             </a>
           </div>
 

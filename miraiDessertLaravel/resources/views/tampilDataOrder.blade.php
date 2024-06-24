@@ -2,6 +2,7 @@
 @Include ('components.cssWebsite')
 @section('content')
 
+
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <div class="container-fluid py-4">
         <div class="container-fluid col-10">
@@ -10,11 +11,11 @@
             <form action="/updateDataOrder/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="idPenjualan" class="form-label">ID Penjualan</label>
                     <input type="form-text" name="id" class="form-control"
                         value="{{$data->id}}">
-                </div>
+                </div> -->
                 <div class="mb-3">
                     <label for="selectProduct" class="form-label">Produk</label>
                     <select id="selectProduct" name="productList" class="form-select">
@@ -28,7 +29,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="total" class="form-label">Total Harga</label>
-                    <input type="number" name="orderTotal" class="form-control" value="{{$data->orderTotal}}">  
+                    <input type="number" name="orderTotal" class="form-control harga" value="{{$data->orderTotal}}">  
                 </div>
                 <div class="mb-3">
                     <label for="tanggalPembelian" class="form-label">Tanggal Pembelian</label>
@@ -57,7 +58,7 @@
                 <div class="card-footer mt-4">
 
                     <button type="submit" class="btn btn-primary">Save</button>
-                    <a href="\invoices" class="btn btn-warning ms-3" style="color: black">
+                    <a href="\penjualanMirai" class="btn btn-warning ms-3" style="color: black">
                     <i class="fas fa-arrow-left"></i> Back
                     </a>
                 </div>
